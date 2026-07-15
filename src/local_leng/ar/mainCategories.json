@@ -1,0 +1,47 @@
+{
+  "categories": {
+    "vehicles": "المركبات",
+    "jobs": "الوظائف",
+    "realEstate": "العقارات",
+    "electronics": "الإلكترونيات",
+    "services": "الخدمات",
+    "groups": "الفئات"
+  },
+
+  "categoriesItems": {
+    "cars": "السيارات",
+    "carShowrooms": "معارض السيارات",
+    "carServices": "خدمات السيارات",
+    "spareParts": "قطع الغيار",
+    "carRentals": "تأجير السيارات",
+    "motorcycles": "الدراجات النارية",
+
+    "jobVacancies": "الوظائف الشاغرة",
+    "jobSeekers": "الباحثون عن عمل",
+    "freelancers": "العمل الحر",
+
+    "residentialSale": "العقارات السكنية للبيع",
+    "lands": "الأراضي",
+    "furniture": "الأثاث",
+    "residentialRent": "العقارات السكنية للإيجار",
+    "commercialSale": "العقارات التجارية للبيع",
+    "commercialRent": "العقارات التجارية للإيجار",
+
+    "mobiles": "الهواتف المحمولة",
+    "electronics": "الإلكترونيات",
+    "homeAppliances": "الأجهزة المنزلية",
+    "cameraVideos": "الكاميرات والفيديو",
+    "electronicGames": "الألعاب الإلكترونية",
+
+    "airConditioners": "مكيفات الهواء",
+    "cleanServices": "خدمات التنظيف",
+    "occasions": "المناسبات",
+    "construction": "البناء",
+    "furnitureMoving": "نقل الأثاث",
+    "transportServices": "خدمات النقل",
+    "education": "التعليم",
+    "sellingProjects": "بيع المشاريع",
+    "maintenanceServices": "خدمات الصيانة",
+    "businessServices": "خدمات الأعمال"
+  }
+}

@@ -1,0 +1,233 @@
+:root {
+  --orange-bg: #ff7a18;
+  --orange-dark: #e85d04;
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --border-color: #ededed;
+}
+
+
+/* MAIN HEADER */
+.main-header {
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  position:relative; /* sticky remove */
+  z-index:1000;
+  background:#fff;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+
+/* COMMON CONTAINER */
+.nav-container {
+  max-width:1400px;
+  width:100%;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* ================= categories icon clike css================= */
+
+/* Container for navigation link */
+.nav-links {
+  position: relative; /* Crucial for absolute positioning of dropdown */
+  display: inline-block;
+}
+
+.dropdown-link-white {
+  color: #ffffff; /* Adjust color according to your header scheme */
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+}
+
+/* Arrow rotation effect */
+.arrow-down {
+  transition: transform 0.2s ease;
+  font-size: 10px;
+}
+
+.arrow-down.open {
+  transform: rotate(180deg);
+}
+
+/* Main Mega-Dropdown Container */
+ 
+/* ================= TOP NAVBAR ================= */
+
+.top-navbar-white {
+  height: 110px;
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid var(--border-color);
+}
+
+
+.logo-image {
+  width:150px;
+  height:150px;
+  object-fit:contain;
+  padding:0;
+  transform:translateY(-8px);
+  transition:.3s ease;
+}
+
+
+.logo-image:hover {
+  transform:translateY(8px) scale(1.05);
+}
+
+
+/* LEFT + RIGHT GROUP */
+.left-side,
+.right-side {
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+
+/* DROPDOWN */
+.dropdown-link-white {
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  padding:9px 15px;
+
+  background:#f7f7f7;
+  border-radius:10px;
+
+  color:var(--text-dark);
+  font-size:14px;
+  font-weight:600;
+
+  cursor:pointer;
+  transition:.3s;
+}
+
+
+.dropdown-link-white:hover {
+  background:#eeeeee;
+}
+
+
+
+/* ICON BUTTON */
+.icon-btn-white {
+
+  width:42px;
+  height:42px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#f7f7f7;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  font-size:18px;
+
+  transition:.3s;
+}
+
+
+.icon-btn-white:hover {
+  background:#eaeaea;
+}
+
+/* profile card css*/
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;      /* Button ke bilkul neeche */
+  left: 0;        /* Button ke left se start hoga */
+
+  margin-top: 8px;
+  width: 180px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  z-index: 999;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-dropdown a:hover {
+  background: #f5f5f5;
+}
+
+
+
+/* LANGUAGE */
+.lang-switch-white {
+
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+
+
+/* POST BUTTON */
+.add-adv-btn-white {
+
+  background:linear-gradient(
+    135deg,
+    #ff7a18,
+    #ff9f1c
+  );
+
+  color:white;
+
+  border:none;
+
+  padding:12px 24px;
+
+  border-radius:10px;
+
+  font-size:14px;
+  font-weight:700;
+
+  cursor:pointer;
+  height:55px;
+  transition:.3s;
+}
+
+
+.add-adv-btn-white:hover {
+
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 8px 20px rgba(255,122,24,.3);
+
+}
+
+
+
+
+
+
+

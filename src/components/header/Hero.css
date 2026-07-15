@@ -1,0 +1,163 @@
+.hero-wrapper {
+  width: 100%;
+  padding: 30px 0 50px 0;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.hero-slider-container {
+  max-width: 1400px; /* Increased length capacity matching header layout line boundary */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Expanded Wide Aspect Ratio Viewport Container */
+.viewport-3d-wide {
+  width: 100%;
+  height: 220px; /* Tall proportional layout stance for horizontal wide elements */
+  position: relative;
+  perspective: 1800px;
+}
+
+.wide-ad-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  /* Left-to-right sliding transitions using 3D rotative depth offsets */
+  transition: transform 0.85s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.85s ease;
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 1. In view active center slot */
+.wide-ad-card.active-slide {
+  transform: translateX(0) rotateY(0deg) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 5;
+}
+
+/* 2. Disappear to the Right Side */
+.wide-ad-card.prev-slide {
+  transform: translateX(100%) rotateY(35deg) scale(0.9);
+  opacity: 0;
+  z-index: 2;
+}
+
+/* 3. Wait on the Left Side to arrive */
+.wide-ad-card.next-slide {
+  transform: translateX(-100%) rotateY(-35deg) scale(0.9);
+  opacity: 0;
+  z-index: 2;
+}
+
+/* Content Frame Structuring */
+.banner-layout-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  color: #ffffff;
+  direction: rtl; /* Maintains flawless alignment syntax matching original screen reference */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.banner-main-text {
+  font-size: 34px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  max-width: 65%;
+}
+
+.decorations-3d {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.snowflake-graphic {
+  font-size: 70px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+  animation: floatRotation 10s linear infinite;
+}
+
+.ice-cube {
+  font-size: 45px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+  animation: floatY 4s ease-in-out infinite alternate;
+}
+
+.premium-tag {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Control Dots Structure */
+.dots-navigation {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.nav-dot-item {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-dot-item.active {
+  background-color: var(--primary-orange, #ff6b00);
+  transform: scale(1.3);
+}
+
+/* Animations */
+@keyframes floatRotation {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes floatY {
+  0% { transform: translateY(-6px); }
+  100% { transform: translateY(6px); }
+}
+
+/* High fidelity responsive scale adjustments */
+@media (max-width: 992px) {
+  .viewport-3d-wide { height: 170px; }
+  .banner-layout-inner { padding: 0 40px; }
+  .banner-main-text { font-size: 24px; max-width: 70%; }
+  .snowflake-graphic { font-size: 45px; }
+  .ice-cube { display: none; }
+}
+
+@media (max-width: 600px) {
+  .viewport-3d-wide { height: 130px; }
+  .banner-layout-inner { padding: 0 20px; }
+  .banner-main-text { font-size: 16px; }
+  .premium-tag { font-size: 13px; padding: 6px 14px; }
+  .snowflake-graphic { font-size: 30px; }
+}

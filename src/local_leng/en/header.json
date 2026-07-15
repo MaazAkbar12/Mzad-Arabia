@@ -1,0 +1,17 @@
+{
+  "home": "Home",
+  
+  "login": "Login",
+  "myAds": "My Ads",
+  "postAd": "Post Ad",
+  "search": "Search",
+  "searchPlaceholder": "Search  categories...",
+   "trending_now": "Trending Now",
+  
+  "header": {
+    "adsCategories": "Ads Categories",
+     "categories": "Categories",
+    "categoriesOverview": "Categories Overview",
+    "seeAll": "See all categories"
+  }
+}

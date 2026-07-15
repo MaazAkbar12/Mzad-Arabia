@@ -1,0 +1,18 @@
+{
+  "home": "الرئيسية",
+   
+  "login": "تسجيل الدخول",
+  "myAds": "إعلاناتي",
+  "postAd": "نشر إعلان",
+  "search": "بحث",
+  "searchPlaceholder": "فئات البحث", 
+   "trending_now": "الرائج الآن",
+ 
+
+  "header": {
+    "adsCategories": "فئات الإعلانات",
+     "categories": "الفئات",
+    "categoriesOverview": "نظرة عامة على الفئات",
+    "seeAll": "عرض جميع الفئات"
+  }
+}

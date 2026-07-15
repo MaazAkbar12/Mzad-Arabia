@@ -1,0 +1,47 @@
+{
+  "categories": {
+    "vehicles": "VEHICLES",
+    "jobs": "JOBS",
+    "realEstate": "REAL ESTATE",
+    "electronics": "ELECTRONICS",
+    "services": "SERVICES",
+     "groups":"Groups"
+  },
+
+  "categoriesItems": {
+    "cars": "Cars",
+    "carShowrooms": "Car Showrooms",
+    "carServices": "Car Services",
+    "spareParts": "Spare Parts",
+    "carRentals": "Car Rentals",
+    "motorcycles": "Motorcycles",
+
+    "jobVacancies": "Job Vacancies",
+    "jobSeekers": "Job Seekers",
+    "freelancers": "Freelancers",
+
+    "residentialSale": "Residential Properties for Sale",
+    "lands": "Lands",
+    "furniture": "Furniture",
+    "residentialRent": "Residential Properties for Rent",
+    "commercialSale": "Commercial Properties for Sale",
+    "commercialRent": "Commercial Properties for Rent",
+
+    "mobiles": "Mobiles",
+    "electronics": "Electronics",
+    "homeAppliances": "Home Appliances",
+    "cameraVideos": "Camera & Videos",
+    "electronicGames": "Electronic Games",
+
+    "airConditioners": "Air Conditioners",
+    "cleanServices": "Clean Services",
+    "occasions": "Occasions",
+    "construction": "Construction",
+    "furnitureMoving": "Furniture Moving",
+    "transportServices": "Transport Services",
+    "education": "Education",
+    "sellingProjects": "Selling Projects",
+    "maintenanceServices": "Maintenance Services",
+    "businessServices": "Business Services"
+  }
+}

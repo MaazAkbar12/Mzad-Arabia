@@ -1,0 +1,479 @@
+/* ================= SEARCH ROW ================= */
+
+
+.search-row-orange {
+
+  background:linear-gradient(
+    135deg,
+    #ff7a18,
+    #ff9f1c
+  );
+
+  padding:16px 0;
+}
+
+
+
+/* SEARCH CONTAINER */
+
+.search-flex-container {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  max-width:850px;
+
+  width:100%;
+
+  margin:auto;
+}
+
+
+
+/* SEARCH INPUT */
+
+.search-wrapper {
+
+  flex:1;
+
+  height:50px;
+
+  background:white;
+
+  border-radius:12px;
+
+  display:flex;
+
+  align-items:center;
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,.12);
+
+}
+
+
+
+.search-input {
+
+  width:100%;
+
+  height:100%;
+
+  border:none;
+
+  outline:none;
+
+  padding:0 20px;
+
+  font-size:15px;
+
+}
+
+
+
+/* SEARCH BUTTON */
+
+
+.search-btny {
+
+  width:52px;
+
+  height:50px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:white;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+
+.search-btny svg {
+
+  width:22px;
+
+  height:22px;
+
+  stroke:#ff6b00;
+
+}
+
+
+.search-btny:hover {
+
+  transform:scale(1.05);
+
+}
+
+/* ================= SEARCH CATEGORY DROPDOWN ================= */
+
+.nav-container {
+  position: relative;
+}
+
+
+/* Group heading */
+
+ 
+
+/* Dropdown Main Card */
+
+.search-category-card {
+
+  position: absolute;
+
+  top: 75px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 850px;
+
+  background:#ffffff;
+
+  border-radius:16px;
+
+  padding:20px;
+
+  display:flex;
+
+  gap:16px;
+
+  justify-content:space-between;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.15);
+
+  z-index:99999;
+
+}
+
+.search-category-header {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:20px;
+
+}
+
+
+
+/* Group Title */
+
+.search-category-title {
+
+  font-size:20px;
+
+  font-weight:700;
+
+  color:#1a1a1a;
+
+  margin:0;
+
+}
+
+
+
+/* ================= CATEGORY POPUP CARD ================= */
+
+.category-popup-card {
+
+  position:absolute;
+
+  top:75px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:850px;
+
+  background:#ffffff;
+
+  border-radius:16px;
+
+  padding:20px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+  z-index:99999;
+
+}
+
+
+/* Close Button */
+
+.search-category-close {
+
+  width:32px;
+
+  height:32px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#f5f5f5;
+
+  color:#333;
+
+  font-size:18px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  transition:.3s;
+
+}
+
+
+
+/* CATEGORY LIST */
+
+.category-popup-list {
+
+  display:flex;
+
+  flex-direction:row;
+
+  gap:16px;
+
+}
+
+
+/* CATEGORY ITEM */
+
+.category-popup-item {
+
+  flex:1;
+
+  height:90px;
+
+  background:#f8f8f8;
+
+  border-radius:14px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  cursor:pointer;
+
+  border:1px solid #eeeeee;
+
+  transition:.3s;
+
+}
+
+
+.category-popup-item:hover {
+
+  background:#fff1e6;
+
+  transform:translateY(-4px);
+
+}
+
+
+/* ICON */
+
+.category-popup-icon {
+
+  font-size:32px;
+
+  margin-bottom:8px;
+
+}
+
+
+
+/* NAME */
+
+.category-popup-name {
+
+  font-size:14px;
+
+  font-weight:600;
+
+  color:#222;
+
+}
+
+.search-category-close:hover {
+
+  background:#ff7a18;
+
+  color:white;
+
+}
+
+/* Each Category */
+
+.search-category-item {
+
+  flex:1;
+
+  height:90px;
+
+  background:#f8f8f8;
+
+  border-radius:14px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  cursor:pointer;
+
+  transition:.3s ease;
+
+  border:1px solid #eeeeee;
+
+}
+
+
+.search-category-item:hover {
+
+  background:#fff1e6;
+
+  transform:translateY(-4px);
+
+}
+
+
+
+/* Category Icon */
+
+.search-category-icon {
+
+  font-size:32px;
+
+  line-height:1;
+
+  margin-bottom:8px;
+
+}
+
+
+
+/* Category Text */
+
+.search-category-name {
+
+  font-size:14px;
+
+  font-weight:600;
+
+  color:#222;
+
+}
+
+/* ================= POPUP HEADER ================= */
+.category-popup-header {
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:20px;
+
+}
+
+
+/* Groups Heading Left */
+
+.category-popup-title {
+
+  margin:0;
+
+  font-size:20px;
+
+  font-weight:700;
+
+  color:#1a1a1a;
+
+}
+
+
+
+/* Cancel Icon Right */
+
+/* Cancel Icon Right */
+
+.category-popup-close {
+
+  width:34px;
+
+  height:34px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#f5f5f5;
+
+  color:#333;
+
+  font-size:22px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  transition:.3s ease;
+
+}
+
+
+
+.category-popup-close:hover {
+
+  background:#ff7a18;
+
+  color:white;
+
+}
