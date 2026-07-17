@@ -1,0 +1,28 @@
+{
+  "contact": {
+
+    "tag": "Contact Us",
+
+    "title": "Get In Touch With Us",
+
+    "description": "Have questions, suggestions, or need help? Send us a message and our team will contact you as soon as possible.",
+
+
+    "emailInfo": "support@example.com",
+
+    "replyInfo": "We reply within 24 hours",
+
+
+    "fullName": "Full Name",
+
+    "email": "Email Address",
+
+    "message": "Write your message...",
+
+
+    "button": "Send Message",
+
+    "success": "Message Sent Successfully!"
+
+  }
+}

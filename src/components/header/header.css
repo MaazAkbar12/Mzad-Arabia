@@ -9,15 +9,39 @@
 
 /* MAIN HEADER */
 .main-header {
+
   width:100%;
+
   display:flex;
+
   flex-direction:column;
-  position:relative; /* sticky remove */
+
+  position:relative;
+
   z-index:1000;
+
   background:#fff;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+  overflow:visible;
+
 }
 
+
+html[dir="rtl"] .category-dropdown-container{
+
+
+    left:auto;
+
+
+    right:20px;
+
+
+    transform:none;
+
+
+}
 
 /* COMMON CONTAINER */
 .nav-container {
@@ -34,8 +58,13 @@
 
 /* Container for navigation link */
 .nav-links {
-  position: relative; /* Crucial for absolute positioning of dropdown */
-  display: inline-block;
+
+  position:relative;
+
+  display:inline-block;
+
+  z-index:999999;
+
 }
 
 .dropdown-link-white {
@@ -62,12 +91,12 @@
  
 /* ================= TOP NAVBAR ================= */
 
-.top-navbar-white {
-  height: 110px;
-  background:#ffffff;
-  display:flex;
-  align-items:center;
-  border-bottom:1px solid var(--border-color);
+.top-navbar-white{
+
+  position:relative;
+
+  z-index:10000;
+
 }
 
 
@@ -193,11 +222,13 @@
 /* POST BUTTON */
 .add-adv-btn-white {
 
+  
   background:linear-gradient(
-    135deg,
-    #ff7a18,
-    #ff9f1c
-  );
+        135deg,
+        #ff7a18 0%,
+        #ff9f1c 50%,
+        #38b000 100%
+    );
 
   color:white;
 
@@ -226,7 +257,343 @@
 }
 
 
+/* ================================================= */
+/* ================= RESPONSIVE FIX ================= */
+/* ================================================= */
 
+
+/* Laptop */
+
+@media(max-width:1200px){
+
+
+.top-navbar-white{
+
+ height:100px;
+
+}
+
+
+.logo-image{
+
+ width:120px;
+
+ height:120px;
+
+}
+
+
+.left-side,
+.right-side{
+
+ gap:15px;
+
+}
+
+
+
+}
+
+
+
+/* Tablet */
+
+@media(max-width:992px){
+
+
+
+.top-navbar-white{
+
+ height:auto;
+
+ padding:10px 0;
+
+}
+
+
+
+.nav-container{
+
+
+ padding:0 15px;
+
+
+}
+
+
+
+.logo-image{
+
+
+ width:100px;
+
+ height:100px;
+
+
+}
+
+
+
+.left-side,
+.right-side{
+
+
+ gap:12px;
+
+
+}
+
+
+
+.add-adv-btn-white{
+
+
+ height:45px;
+
+ padding:10px 15px;
+
+
+}
+
+
+
+.category-dropdown-container{
+
+
+ width:90vw;
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+
+.top-navbar-white{
+
+
+ height:auto;
+
+
+}
+
+
+
+.nav-container{
+
+
+ display:flex;
+
+ flex-direction:row;
+
+ flex-wrap:wrap;
+
+ justify-content:center;
+
+ gap:12px;
+
+
+}
+
+
+
+.left-side{
+
+
+ width:100%;
+
+ justify-content:center;
+
+
+}
+
+
+
+.right-side{
+
+
+ width:100%;
+
+ justify-content:center;
+
+
+}
+
+
+
+.logo-image{
+
+
+ width:80px;
+
+ height:80px;
+
+ transform:none;
+
+
+}
+
+
+
+.dropdown-link-white{
+
+
+ font-size:12px;
+
+ padding:8px 12px;
+
+
+} 
+
+
+
+
+
+.icon-btn-white{
+
+
+ width:36px;
+
+ height:36px;
+
+
+}
+
+
+
+.add-adv-btn-white{
+
+
+ height:40px;
+
+ font-size:12px;
+
+ padding:8px 15px;
+
+
+}
+
+
+
+/* dropdown */
+
+.category-dropdown-container{
+
+
+ position:absolute;
+
+ top:100%;
+
+ left:50%;
+
+ transform:translateX(-50%);
+
+
+ width:calc(100vw - 30px);
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+
+
+.nav-container{
+
+
+ padding:0 8px;
+
+
+}
+
+
+
+.left-side,
+.right-side{
+
+
+ gap:8px;
+
+
+}
+
+
+
+.logo-image{
+
+
+ width:70px;
+
+ height:70px;
+
+
+}
+
+
+
+.dropdown-link-white{
+
+
+ font-size:11px;
+
+
+}
+
+
+
+.icon-btn-white{
+
+
+ width:32px;
+
+ height:32px;
+
+
+}
+
+
+
+.add-adv-btn-white{
+
+
+ width:auto;
+
+
+}
+
+
+
+.category-dropdown-container{
+
+
+ width:calc(100vw - 20px);
+
+
+}
+
+
+
+}
 
 
 

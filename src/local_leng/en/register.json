@@ -1,0 +1,27 @@
+{
+  "register": {
+
+    "title": "Create Account",
+
+    "description": "Create your account and start using our marketplace.",
+
+    "nameLabel": "Full Name",
+
+    "namePlaceholder": "Enter your full name",
+
+    "emailLabel": "Email Address",
+
+    "emailPlaceholder": "Enter your email",
+
+    "passwordLabel": "Password",
+
+    "passwordPlaceholder": "Create password",
+
+    "button": "Create Account",
+
+    "haveAccount": "Already have an account?",
+
+    "login": "Login"
+
+  }
+}

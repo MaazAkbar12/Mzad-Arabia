@@ -116,23 +116,31 @@
 /* Control Dots Structure */
 .dots-navigation {
   display: flex;
-  gap: 12px;
+  gap: 10px;        /* Dots ke beech ka gap thoda kam kiya */
   margin-top: 25px;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-dot-item {
-  width: 14px;
-  height: 14px;
+  width: 10px;       /* Ekdum perfect standard size 10px set kiya */
+  height: 10px;      /* Height bhi 10px */
   border-radius: 50%;
   background-color: #d1d5db;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  padding: 0 !important;       /* Kisi bhi global padding ko remove kiya */
+  line-height: 0 !important;   /* Extra space ko block kiya */
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease;
 }
 
+/* Active dot ko bohot bada karne ki jagah modern look diya */
 .nav-dot-item.active {
   background-color: var(--primary-orange, #ff6b00);
-  transform: scale(1.3);
+  width: 24px;       /* Active dot ko thoda lamba (capsule style) kiya jo premium lagta hai */
+  border-radius: 6px;
+  transform: none;   /* Scale delete kar diya taaki blur ya bada na dikhe */
 }
 
 /* Animations */

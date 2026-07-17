@@ -1,18 +1,19 @@
+ 
+
 .categories-container {
   width: 100%;
-  padding: 40px 60px;
-  background: #f8fafc;
+  padding: 40px 50px;
+  background: #f8fafc; /* Subtle light background to pop the vibrant cards */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px 40px;
+  gap: 50px 40px;
+  font-family: 'Cairo', sans-serif;
 }
-
 
 /* Each category section */
 .category-section {
   width: 100%;
 }
-
 
 /* Header */
 .category-header {
@@ -21,232 +22,141 @@
   align-items: center;
   margin-bottom: 18px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e2e8f0;
 }
-
 
 .category-header h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  color: #111827;
+  color: #0f172a;
 }
-
 
 .ads-count {
-  font-size: 14px;
-  color: #9ca3af;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
 }
 
-
-/* Cards Layout */
+/* Cards Layout Grid System */
 .subcategory-grid {
-
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
-
+  gap: 16px;
 }
 
-
-/* First card big */
+/* Structural Layout Sizes */
 .large-card {
-
-  flex: 0 0 calc(65% - 9px);
-
+  flex: 0 0 calc(63% - 8px);
 }
 
-
-/* Second card small */
 .small-card {
-
-  flex: 0 0 calc(35% - 9px);
-
+  flex: 0 0 calc(37% - 8px);
 }
 
-
-/* Card */
+/* Professional Balanced Gradient Card (Darmayani Light)
+   Teeno colors (#ff7a18, #ff9f1c, #38b000) ko 45% se 50% opacity blend ke sath apply kiya hai.
+*/
 .subcategory-card {
-
-  height: 150px;
+  height: 135px;
   position: relative;
-
-  border-radius: 20px;
-
+  border-radius: 16px;
   overflow: hidden;
-
-  padding: 25px;
-
-  display:flex;
-  align-items:flex-start;
-
-  cursor:pointer;
-
-  transition:.35s ease;
-
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  
+  /* Half-light beautiful corporate gradient overlay */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 122, 24, 0.45) 0%,   /* Balanced Orange */
+    rgba(255, 159, 28, 0.50) 50%,  /* Balanced Amber */
+    rgba(56, 176, 0, 0.45) 100%    /* Balanced Green */
+  );
+  border: 1px solid rgba(255, 159, 28, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
-
-/* Hover */
+/* Dynamic Hover Action */
 .subcategory-card:hover {
-
- transform:
- translateY(-6px)
- scale(1.02);
-
+  box-shadow: 0 12px 25px -5px rgba(255, 122, 24, 0.2);
+  /* Opaqueness increases on hover for rich interactive feel */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 122, 24, 0.55) 0%,
+    rgba(255, 159, 28, 0.60) 50%,
+    rgba(56, 176, 0, 0.55) 100%
+  );
 }
 
-
-/* Text */
+/* Text Content Placement */
 .card-content {
-
- position:relative;
- z-index:3;
-
+  position: relative;
+  z-index: 3;
 }
-
 
 .card-title {
-
- font-size:18px;
- font-weight:600;
- color:#111827;
-
- max-width:180px;
-
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff; /* White text for perfect professional contrast on mid-intensity backgrounds */
+  line-height: 1.4;
+  display: block;
+  max-width: 160px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* Soft drop shadow for perfect clarity */
 }
 
-
-/* Image wrapper */
-
-.card-image-wrapper {
-
- position:absolute;
-
- right:0;
- bottom:0;
-
- width:160px;
- height:130px;
-
- display:flex;
- justify-content:flex-end;
- align-items:flex-end;
-
- z-index:2;
-
+/* Minimal Glassmorphic Vector Clean Wrapper */
+.card-vector-wrapper {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.85); /* Premium clean glass effect inside cards */
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
 }
 
-
-
-/* Actual image */
-
-.card-image {
-
- width:100%;
- height:100%;
-
- object-fit:contain;
-
- display:block;
-
- background:none!important;
-
- border:none!important;
-
- box-shadow:none!important;
-
+.subcategory-card:hover .card-vector-wrapper {
+  transform: scale(1.08) rotate(-3deg);
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(56, 176, 0, 0.2);
 }
 
-
-/* Different colors */
-
-
-.card-theme-0{
-
-background:
-linear-gradient(
-135deg,
-#ffe4e6,
-#fecdd3
-);
-
+.card-vector-emblem {
+  font-size: 30px;
+  user-select: none;
 }
 
-
-.card-theme-1{
-
-background:
-linear-gradient(
-135deg,
-#dbeafe,
-#bfdbfe
-);
-
+/* Structural Breakpoints */
+@media(max-width: 1100px) {
+  .categories-container {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
 }
 
-
-.card-theme-2{
-
-background:
-linear-gradient(
-135deg,
-#dcfce7,
-#bbf7d0
-);
-
-}
-
-
-.card-theme-3{
-
-background:
-linear-gradient(
-135deg,
-#fef3c7,
-#fde68a
-);
-
-}
-
-
-.card-theme-4{
-
-background:
-linear-gradient(
-135deg,
-#ede9fe,
-#ddd6fe
-);
-
-}
-
-
-
-/* Responsive */
-
-@media(max-width:1100px){
-
-.categories-container{
-
-grid-template-columns:1fr;
-
-padding:30px;
-
-}
-
-
-}
-
-
-@media(max-width:600px){
-
-
-.large-card,
-.small-card{
-
-flex:0 0 100%;
-
-}
-
-
+@media(max-width: 600px) {
+  .large-card, .small-card {
+    flex: 0 0 100%;
+    height: 115px;
+  }
+  .card-title {
+    font-size: 15px;
+  }
+  .card-vector-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+  .card-vector-emblem {
+    font-size: 24px;
+  }
 }

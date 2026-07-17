@@ -13,23 +13,23 @@ const [searchText, setSearchText] = useState("");
   const categories = [
   {
     icon: "🚗",
-    name: t("categories.vehicles")
+    name: t("categoriess.vehicles")
   },
   {
     icon: "💼",
-    name: t("categories.jobs")
+    name: t("categoriess.jobs")
   },
   {
     icon: "🏠",
-    name: t("categories.realEstate")
+    name: t("categoriess.realEstate")
   },
   {
     icon: "📱",
-    name: t("categories.electronics")
+    name: t("categoriess.electronics")
   },
   {
     icon: "🛠️",
-    name: t("categories.services")
+    name: t("categoriess.services")
   }
 ];
 
@@ -114,7 +114,7 @@ const [searchText, setSearchText] = useState("");
 
 
         <h2 className="category-popup-title">
-           {t("categories.groups")}
+           {t("categoriess.groups")}
         </h2>
 
 

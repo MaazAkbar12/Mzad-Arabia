@@ -1545,6 +1545,49 @@ height="24"
 
 </div>
         </div>
+
+
+
+        {/* ================= CATEGORY 32: Car Showrooms ================= */}
+<div className="category-block animation-fade-in">
+  <div className="dropdown-right-header">
+    <img 
+      data-v-129479ce="" 
+      src="https://content.mzadqatar.com/cdn/cat/v4/menu/VHWaqkSXnx.png" /* Aap is URL ko apne icon URL se replace kar sakte hain */
+      className="category-icon desktoplogo" 
+      alt="Car Showrooms Icon"
+      width="24"
+      height="24"
+    />
+    <h3>{t("adsCategories.carShowrooms")}</h3>
+  </div>
+  <div className="subcategories-grid">
+
+    {/* Column 1 */}
+    <div className="category-column">
+      <a href="#">{t("subcategories.newCars")}</a>
+      <a href="#">{t("subcategories.usedCars")}</a>
+      <a href="#">{t("subcategories.luxuryShowrooms")}</a>
+      <a href="#">{t("subcategories.certifiedPreOwned")}</a>
+    </div>
+
+    {/* Column 2 */}
+    <div className="category-column">
+      <a href="#">{t("subcategories.vipShowrooms")}</a>
+      <a href="#">{t("subcategories.premiumShowrooms")}</a>
+      <a href="#">{t("subcategories.budgetShowrooms")}</a>
+      <a href="#">{t("subcategories.commercialShowrooms")}</a>
+    </div>
+
+    {/* Column 3 */}
+    <div className="category-column">
+      <a href="#">{t("subcategories.importedCars")}</a>
+      <a href="#">{t("subcategories.electricShowrooms")}</a>
+      <a href="#">{t("subcategories.agencyShowrooms")}</a>
+    </div>
+
+  </div>
+</div>
       </>
     )}
 

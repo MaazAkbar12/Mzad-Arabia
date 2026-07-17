@@ -1,0 +1,24 @@
+{
+  "footer": {
+    "description": "نوفر منصة سوق موثوقة لإجراء معاملات آمنة وقيّمة.",
+
+    "categories": "الفئات",
+    "vehicles": "المركبات",
+    "jobs": "الوظائف",
+    "realEstate": "العقارات",
+    "electronics": "الإلكترونيات",
+    "services": "الخدمات",
+
+    "information": "المعلومات",
+    "aboutUs": "من نحن",
+    "termsOfService": "شروط الخدمة",
+    "privacyPolicy": "سياسة الخصوصية",
+
+    "help": "المساعدة",
+    "contactUs": "اتصل بنا",
+    "faq": "الأسئلة الشائعة",
+    "support": "الدعم",
+
+    "copyright": "© 2024 سوق أورا. جميع الحقوق محفوظة."
+  }
+}

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import AdsCategories from "../dropdown/AdsCategories";
 import i18n from "i18next";
 import SearchBar from "./searchbar";
+import { Link } from "react-router-dom";
 
 
 export default function Header() {
@@ -49,13 +50,19 @@ export default function Header() {
 
           <div className="left-side">
 
-            <div className="logo-wrapper">
-              <img 
-                src={logo} 
+           <div className="logo-wrapper">
+
+               <Link to="/">
+  
+             <img 
+               src={logo} 
                 alt="Aura Market Logo" 
-                className="logo-image" 
-              />
-            </div>
+              className="logo-image" 
+               />
+
+            </Link>
+
+</div>
                {/* start code   */}
             <nav className="nav-links">
               {/* Dropdown Trigger Button */}
@@ -92,8 +99,13 @@ export default function Header() {
 
   {showProfileMenu && (
     <div className="profile-dropdown">
-      <a href="/my-ads">📋 {t("myAds")}</a>
-      <a href="/login">🔑 {t("login")}</a>
+      <Link href="/my-ads">📋 {t("myAds")}</Link>
+     <Link to="/login">
+        🔑 {t("loginButton")}
+      </Link>
+      <Link to="/register">
+  📝 {t("createAccount")}
+</Link>
     </div>
   )}
 </div>
@@ -116,9 +128,14 @@ export default function Header() {
 )}
 
 
-            <button className="add-adv-btn-white">
-              + {t("postAd")}
-            </button>
+   <Link 
+ to="/post-ad"
+ className="add-adv-btn-white"
+>
+ + {t("postAdButton")}
+</Link>
+
+    
 
           </div>
 

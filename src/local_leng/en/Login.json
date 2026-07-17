@@ -1,0 +1,19 @@
+{
+  "login": {
+
+    "title": "Login",
+
+    "description": "Enter your email address and we will send you a secure login link.",
+
+    "emailLabel": "Email Address",
+
+    "emailPlaceholder": "Enter your email",
+
+    "continue": "Continue",
+
+    "noAccount": "Don't have an account?",
+
+    "createAccount": "Create Account"
+
+  }
+}

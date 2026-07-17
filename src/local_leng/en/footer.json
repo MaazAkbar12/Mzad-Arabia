@@ -1,0 +1,24 @@
+{
+  "footer": {
+    "description": "Providing a high-trust marketplace platform for secure and valuable transactions.",
+
+    "categories": "Categories",
+    "vehicles": "Vehicles",
+    "jobs": "Jobs",
+    "realEstate": "Real Estate",
+    "electronics": "Electronics",
+    "services": "Services",
+
+    "information": "Information",
+    "aboutUs": "About Us",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+
+    "help": "Help",
+    "contactUs": "Contact Us",
+    "faq": "FAQ",
+    "support": "Support",
+
+    "copyright": "© 2024 Aura Market. All rights reserved."
+  }
+}

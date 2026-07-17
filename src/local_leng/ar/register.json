@@ -1,0 +1,27 @@
+{
+  "register": {
+
+    "title": "إنشاء حساب",
+
+    "description": "أنشئ حسابك وابدأ باستخدام منصتنا.",
+
+    "nameLabel": "الاسم الكامل",
+
+    "namePlaceholder": "أدخل اسمك الكامل",
+
+    "emailLabel": "البريد الإلكتروني",
+
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+
+    "passwordLabel": "كلمة المرور",
+
+    "passwordPlaceholder": "إنشاء كلمة مرور",
+
+    "button": "إنشاء حساب",
+
+    "haveAccount": "لديك حساب بالفعل؟",
+
+    "login": "تسجيل الدخول"
+
+  }
+}

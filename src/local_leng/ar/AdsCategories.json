@@ -29,7 +29,8 @@
   "cameras": "الكاميرات",
   "ElectronicGame": "الألعاب الإلكترونية",
   "JobSeekers": "الباحثون عن عمل",
-  "Freelancer": "العمل الحر"
+  "Freelancer": "العمل الحر",
+   "carShowrooms": "معارض السيارات"
   },
 
   "subcategories": {
@@ -529,7 +530,23 @@
 
     "lifestyle": "نمط الحياة",
     "photography": "التصوير الفوتوغرافي",
-    "dataAnalytics": "البيانات والتحليلات"
+    "dataAnalytics": "البيانات والتحليلات",
+
+"newCars": "سيارات جديدة",
+"usedCars": "سيارات مستعملة",
+"luxuryShowrooms": "معارض فاخرة",
+"certifiedPreOwned": "مستعمل معتمد",
+"vipShowrooms": "معارض VIP",
+"premiumShowrooms": "معارض مميزة",
+"budgetShowrooms": "معارض اقتصادية",
+"commercialShowrooms": "معارض تجارية",
+"importedCars": "سيارات مستوردة",
+"electricShowrooms": "معارض السيارات الكهربائية",
+"agencyShowrooms": "الوكالات الرسمية"
+
+
+
+   
   
     
  

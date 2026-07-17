@@ -534,7 +534,20 @@
 
     "lifestyle": "Lifestyle",
     "photography": "Photography",
-    "dataAnalytics": "Data & Analytics"
+    "dataAnalytics": "Data & Analytics",
+
+
+      "newCars": "New Cars",
+  "usedCars": "Used Cars",
+  "luxuryShowrooms": "Luxury Showrooms",
+  "certifiedPreOwned": "Certified Pre-Owned",
+  "vipShowrooms": "VIP Showrooms",
+  "premiumShowrooms": "Premium Showrooms",
+  "budgetShowrooms": "Budget Showrooms",
+  "commercialShowrooms": "Commercial Showrooms",
+  "importedCars": "Imported Cars",
+  "electricShowrooms": "EV Showrooms",
+  "agencyShowrooms": "Official Agencies"
 
     
     

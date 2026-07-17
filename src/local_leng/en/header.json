@@ -1,16 +1,16 @@
 {
   "home": "Home",
-  
-  "login": "Login",
+  "loginButton": "Login",
   "myAds": "My Ads",
-  "postAd": "Post Ad",
+  "postAdButton": "Post Ad",
   "search": "Search",
-  "searchPlaceholder": "Search  categories...",
-   "trending_now": "Trending Now",
-  
+  "searchPlaceholder": "Search categories...",
+  "trending_now": "Trending Now",
+  "createAccount": "Create Account",
+
   "header": {
     "adsCategories": "Ads Categories",
-     "categories": "Categories",
+    "categories": "Categories",
     "categoriesOverview": "Categories Overview",
     "seeAll": "See all categories"
   }

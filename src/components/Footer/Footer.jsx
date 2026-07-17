@@ -1,191 +1,131 @@
 import React from "react";
 import "./Footer.css";
+import { useTranslation } from "react-i18next";
+
+import logo from "../../assets/images/logo.png";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn
+} from "react-icons/fa";
 
 export default function Footer() {
 
+  const { t } = useTranslation();
+
   return (
-
     <footer className="footer">
-
 
       <div className="footer-container">
 
-
-        {/* Brand Section */}
-
+        {/* Brand */}
         <div className="footer-brand">
 
-
-          <h2>
-            Aura Market
-          </h2>
-
+          <img
+            src={logo}
+            alt="Aura Market"
+            className="footer-logo"
+          />
 
           <p>
-            Providing a high-trust platform for curated high-value
-            transactions since 2024.
+            {t("footer.description")}
           </p>
-
-
 
           <div className="social-links">
 
             <a href="#">
-              ↗
+              <FaFacebookF />
             </a>
 
             <a href="#">
-              ✉
+              <FaInstagram />
             </a>
 
             <a href="#">
-              ?
+              <FaTwitter />
+            </a>
+
+            <a href="#">
+              <FaLinkedinIn />
             </a>
 
           </div>
 
-
         </div>
 
-
-
-
-
-        {/* Footer Links */}
-
+        {/* Links */}
         <div className="footer-links">
 
-
-
+          {/* Categories */}
           <div>
 
-            <h4>
-              Shop
-            </h4>
+            <h4>{t("footer.categories")}</h4>
 
             <ul>
 
-              <li>
-                <a href="#">
-                  New Arrivals
-                </a>
-              </li>
+              <li><a href="#">{t("footer.vehicles")}</a></li>
 
+              <li><a href="#">{t("footer.jobs")}</a></li>
 
-              <li>
-                <a href="#">
-                  Best Sellers
-                </a>
-              </li>
+              <li><a href="#">{t("footer.realEstate")}</a></li>
+
+              <li><a href="#">{t("footer.electronics")}</a></li>
+
+              <li><a href="#">{t("footer.services")}</a></li>
 
             </ul>
 
-
           </div>
 
-
-
-
+          {/* Information */}
           <div>
 
-            <h4>
-              Information
-            </h4>
+            <h4>{t("footer.information")}</h4>
 
             <ul>
 
-              <li>
-                <a href="#">
-                  About Us
-                </a>
-              </li>
+              <li><a href="#">{t("footer.aboutUs")}</a></li>
 
+              <li><a href="#">{t("footer.termsOfService")}</a></li>
 
-              <li>
-                <a href="#">
-                  Terms of Service
-                </a>
-              </li>
-
+              <li><a href="#">{t("footer.privacyPolicy")}</a></li>
 
             </ul>
 
-
           </div>
 
-
-
-
-
+          {/* Help */}
           <div>
 
-            <h4>
-              Help
-            </h4>
+            <h4>{t("footer.help")}</h4>
 
             <ul>
 
-              <li>
-                <a href="#">
-                  Contact Us
-                </a>
-              </li>
+              <li><a href="#">{t("footer.contactUs")}</a></li>
 
+              <li><a href="#">{t("footer.faq")}</a></li>
 
-              <li>
-                <a href="#">
-                  FAQ
-                </a>
-              </li>
-
+              <li><a href="#">{t("footer.support")}</a></li>
 
             </ul>
 
-
           </div>
-
-
 
         </div>
 
-
-
       </div>
 
-
-
-
-
-      {/* Bottom Footer */}
-
-
+      {/* Bottom */}
       <div className="footer-bottom">
 
-
         <p>
-          © 2024 Aura Market. All rights reserved.
+          {t("footer.copyright")}
         </p>
-
-
-
-        <div className="payment-icons">
-
-          <span>
-            💳
-          </span>
-
-          <span>
-            💵
-          </span>
-
-
-        </div>
-
 
       </div>
 
-
     </footer>
-
   );
 }

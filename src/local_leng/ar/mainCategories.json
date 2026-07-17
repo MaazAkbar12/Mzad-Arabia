@@ -1,5 +1,5 @@
 {
-  "categories": {
+  "categoriess": {
     "vehicles": "المركبات",
     "jobs": "الوظائف",
     "realEstate": "العقارات",
@@ -42,6 +42,18 @@
     "education": "التعليم",
     "sellingProjects": "بيع المشاريع",
     "maintenanceServices": "خدمات الصيانة",
-    "businessServices": "خدمات الأعمال"
+    "businessServices": "خدمات الأعمال",
+
+    "newCars": "سيارات جديدة",
+"usedCars": "سيارات مستعملة",
+"luxuryShowrooms": "معارض فاخرة",
+"certifiedPreOwned": "مستعمل معتمد",
+"vipShowrooms": "معارض VIP",
+"premiumShowrooms": "معارض مميزة",
+"budgetShowrooms": "معارض اقتصادية",
+"commercialShowrooms": "معارض تجارية",
+"importedCars": "سيارات مستوردة",
+"electricShowrooms": "معارض السيارات الكهربائية",
+"agencyShowrooms": "الوكالات الرسمية"
   }
 }
