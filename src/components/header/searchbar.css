@@ -1,479 +1,244 @@
 /* ================= SEARCH ROW ================= */
-
-
 .search-row-orange {
-
-  background:linear-gradient(
-    135deg,
-    #ff7a18,
-    #ff9f1c
-  );
-
-  padding:16px 0;
+  background: linear-gradient(135deg, #ff7a18, #ff9f1c);
+  padding: 16px 12px; /* Reduced side padding for small screens */
 }
-
-
 
 /* SEARCH CONTAINER */
-
 .search-flex-container {
-
-  display:flex;
-
-  align-items:center;
-
-  gap:14px;
-
-  max-width:850px;
-
-  width:100%;
-
-  margin:auto;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Marginally tighter gap for small devices */
+  max-width: 850px;
+  width: 100%;
+  margin: auto;
 }
 
-
-
-/* SEARCH INPUT */
-
+/* SEARCH WRAPPER */
 .search-wrapper {
-
-  flex:1;
-
-  height:50px;
-
-  background:white;
-
-  border-radius:12px;
-
-  display:flex;
-
-  align-items:center;
-
-  box-shadow:
-  0 5px 15px rgba(0,0,0,.12);
-
+  flex: 1;
+  height: 50px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .12);
 }
-
-
 
 .search-input {
-
-  width:100%;
-
-  height:100%;
-
-  border:none;
-
-  outline:none;
-
-  padding:0 20px;
-
-  font-size:15px;
-
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 15px;
+  background: transparent;
 }
-
-
 
 /* SEARCH BUTTON */
-
-
 .search-btny {
-
-  
-
-  height:50px;
-
-  border:none;
-
-  border-radius:12px;
-
-  background:white;
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  cursor:pointer;
-
-  transition:.3s;
-
+  min-width: 55px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .12);
 }
-
 
 .search-btny svg {
-
-  width:22px;
-
-  height:22px;
-
-  stroke:#ff6b00;
-
+  width: 22px;
+  height: 22px;
+  stroke: #ff6b00;
 }
-
 
 .search-btny:hover {
-
-  transform:scale(1.05);
-
+  transform: scale(1.05);
 }
 
-/* ================= SEARCH CATEGORY DROPDOWN ================= */
-
+/* ================= NAV CONTAINER ================= */
 .nav-container {
   position: relative;
+  width: 100%;
 }
 
-
-/* Group heading */
-
- 
-
-/* Dropdown Main Card */
-
-.search-category-card {
-
-  position: absolute;
-
-  top: 75px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 850px;
-
-  background:#ffffff;
-
-  border-radius:16px;
-
-  padding:20px;
-
-  display:flex;
-
-  gap:16px;
-
-  justify-content:space-between;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,0.15);
-
-  z-index:99999;
-
-}
-
-.search-category-header {
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  margin-bottom:20px;
-
-}
-
-
-
-/* Group Title */
-
-.search-category-title {
-
-  font-size:20px;
-
-  font-weight:700;
-
-  color:#1a1a1a;
-
-  margin:0;
-
-}
-
-
-
-/* ================= CATEGORY POPUP CARD ================= */
-
+/* ================= SHARED POPUP / DROPDOWN STYLES ================= */
+.search-category-card,
 .category-popup-card {
-
-  position:absolute;
-
-  top:75px;
-
-  left:50%;
-
-  transform:translateX(-50%);
-
-  width:850px;
-
-  background:#ffffff;
-
-  border-radius:16px;
-
-  padding:20px;
-
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
-
-  z-index:99999;
-
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 850px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 99999;
+  box-sizing: border-box;
 }
 
-
-/* Close Button */
-
-.search-category-close {
-
-  width:32px;
-
-  height:32px;
-
-  border:none;
-
-  border-radius:50%;
-
-  background:#f5f5f5;
-
-  color:#333;
-
-  font-size:18px;
-
-  font-weight:bold;
-
-  cursor:pointer;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  transition:.3s;
-
-}
-
-
-
-/* CATEGORY LIST */
-
-.category-popup-list {
-
-  display:flex;
-
-  flex-direction:row;
-
-  gap:16px;
-
-}
-
-
-/* CATEGORY ITEM */
-
-.category-popup-item {
-
-  flex:1;
-
-  height:90px;
-
-  background:#f8f8f8;
-
-  border-radius:14px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-
-  justify-content:center;
-
-  cursor:pointer;
-
-  border:1px solid #eeeeee;
-
-  transition:.3s;
-
-}
-
-
-.category-popup-item:hover {
-
-  background:#fff1e6;
-
-  transform:translateY(-4px);
-
-}
-
-
-/* ICON */
-
-.category-popup-icon {
-
-  font-size:32px;
-
-  margin-bottom:8px;
-
-}
-
-
-
-/* NAME */
-
-.category-popup-name {
-
-  font-size:14px;
-
-  font-weight:600;
-
-  color:#222;
-
-}
-
-.search-category-close:hover {
-
-  background:#ff7a18;
-
-  color:white;
-
-}
-
-/* Each Category */
-
-.search-category-item {
-
-  flex:1;
-
-  height:90px;
-
-  background:#f8f8f8;
-
-  border-radius:14px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-
-  justify-content:center;
-
-  cursor:pointer;
-
-  transition:.3s ease;
-
-  border:1px solid #eeeeee;
-
-}
-
-
-.search-category-item:hover {
-
-  background:#fff1e6;
-
-  transform:translateY(-4px);
-
-}
-
-
-
-/* Category Icon */
-
-.search-category-icon {
-
-  font-size:32px;
-
-  line-height:1;
-
-  margin-bottom:8px;
-
-}
-
-
-
-/* Category Text */
-
-.search-category-name {
-
-  font-size:14px;
-
-  font-weight:600;
-
-  color:#222;
-
-}
-
-/* ================= POPUP HEADER ================= */
+/* Header Sections inside cards */
+.search-category-header,
 .category-popup-header {
-
-  width:100%;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  margin-bottom:20px;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-
-/* Groups Heading Left */
-
+/* Titles */
+.search-category-title,
 .category-popup-title {
-
-  margin:0;
-
-  font-size:20px;
-
-  font-weight:700;
-
-  color:#1a1a1a;
-
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
 }
 
-
-
-/* Cancel Icon Right */
-
-/* Cancel Icon Right */
-
+/* Close Buttons */
+.search-category-close,
 .category-popup-close {
-
-  width:34px;
-
-  height:34px;
-
-  border:none;
-
-  border-radius:50%;
-
-  background:#f5f5f5;
-
-  color:#333;
-
-  font-size:22px;
-
-  font-weight:bold;
-
-  cursor:pointer;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  transition:.3s ease;
-
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease;
 }
 
-
-
+.search-category-close:hover,
 .category-popup-close:hover {
+  background: #ff7a18;
+  color: white;
+}
 
-  background:#ff7a18;
+/* CATEGORY ITEM LISTS (GRID BASED FOR RESPONSIVENESS) */
+.category-popup-list,
+.search-category-card {
+  /* Overriding old flex setup to clean CSS Grid layout */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 14px;
+}
 
-  color:white;
+/* Separate list wrap rule fix if container is separate element */
+.category-popup-list {
+  display: grid !important; 
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
 
+/* INDIVIDUAL ITEMS */
+.category-popup-item,
+.search-category-item {
+  width: 100%;
+  height: 90px;
+  background: #f8f8f8;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #eeeeee;
+  transition: .3s ease;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.category-popup-item:hover,
+.search-category-item:hover {
+  background: #fff1e6;
+  transform: translateY(-4px);
+  border-color: #ff9f1c;
+}
+
+/* Icons & Labels inside popup cards */
+.category-popup-icon,
+.search-category-icon {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.category-popup-name,
+.search-category-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+/* ================= MEDIA QUERIES (RESPONSIVE BREAKPOINTS) ================= */
+
+/* Tablets and Desktops smaller than full wrapper size */
+@media (max-width: 880px) {
+  .search-category-card,
+  .category-popup-card {
+    width: 95%; /* Prevents popup clipping on smaller screens */
+  }
+}
+
+/* Mobile Screens (Phones) */
+@media (max-width: 580px) {
+  .search-category-card,
+  .category-popup-card {
+    padding: 15px;
+    top: 62px;
+  }
+  
+  .search-category-title,
+  .category-popup-title {
+    font-size: 17px; /* Compact headings for mobile screen estate */
+  }
+
+  /* Grid layout shifts dynamically to fit 2-3 columns cleanly on mobile */
+  .category-popup-list {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px;
+  }
+  
+  /* Fallback template if elements directly use category-card class */
+  .search-category-card {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .category-popup-item,
+  .search-category-item {
+    height: 80px; /* Slightly lower profile items */
+  }
+
+  .category-popup-icon,
+  .search-category-icon {
+    font-size: 24px;
+  }
+
+  .category-popup-name,
+  .search-category-name {
+    font-size: 11px;
+  }
+}
+
+/* Very Small Mobile Screens */
+@media (max-width: 380px) {
+  .category-popup-list,
+  .search-category-card {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 Columns limit for extra tight viewports */
+  }
 }

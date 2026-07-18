@@ -1,0 +1,320 @@
+/* ================= ADMIN SIDEBAR BASE ================= */
+.admin-sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  /* 3-Color Premium Linear Gradient */
+  background: linear-gradient(
+        135deg,
+        #ff7a18 0%,
+        #ff9f1c 50%,
+        #38b000 100%
+  );
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= LOGO & TEXT SAME LINE LAYOUT (BADA & CLEAR SIZE) ================= */
+/* ================= LOGO & TEXT SAME LINE LAYOUT (MAZEED BADA SIZE) ================= */
+.logo-wrapper {
+  margin-bottom: 35px;
+  padding: 0 2px;     /* Padding mazeed kam ki taake bade logo ko full space mile */
+  display: flex;
+  align-items: center;
+}
+
+.logo-link-group {
+  display: flex;
+  align-items: center; /* Image aur text ko perfectly vertical center rakhega */
+  gap: 16px;           /* Logo bada hone ki wajah se gap 16px kiya taake tight na lage */
+  text-decoration: none;
+  width: 100%;
+}
+
+.logo-image {
+  height: 70px;        /* Height ab 50px se barha kar 70px kar di hai */
+  width: 70px;         /* Width bhi 70px kar di taake logo khul kar bada dikhe */
+  object-fit: contain; /* Logo stretch ya distort nahi hoga, clean dikhega */
+  display: block;
+  flex-shrink: 0;      
+}
+
+.logo-text {
+  font-size: 22px;     /* Text ka size bhi 22px kiya taake bade logo ke sath match kare */
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  white-space: nowrap; 
+}
+
+/* Responsive Handling (Mobile Screen) */
+@media (max-width: 768px) {
+  .logo-wrapper {
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .logo-text {
+    display: none !important;
+  }
+  
+  .logo-image {
+    height: 45px;      /* Mobile par bhi size thoda barha diya */
+    width: 45px;
+  }
+}
+
+/* ================= NAVIGATION MENU ================= */
+.admin-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+/* Icons styling inside sidebar */
+.menu-icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* MAIN LINKS STYLE */
+.admin-menu a, 
+.menu-dropdown-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.dropdown-title-group {
+  display: flex;
+  align-items: center;
+}
+
+/* HOVER EFFECTS FOR MAIN LINKS */
+.admin-menu a:hover,
+.menu-dropdown-header:hover {
+  background-color: #ff6b00;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.25);
+}
+
+/* ACTIVE CLASS */
+.admin-menu a.active {
+  background-color: #ffffff;
+  color: #ff6b00;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.admin-menu a.active .sidebar-notification-badge {
+  background-color: #ff6b00;
+  color: #ffffff;
+}
+
+/* ================= NOTIFICATION BADGE ================= */
+.notification-menu-link {
+  position: relative;
+}
+
+.sidebar-notification-badge {
+  background-color: #ffffff;
+  color: #ff6b00;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-left: auto; /* Badge ko right side par push karta hai */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= DROPDOWN HANDLING LAYERS ================= */
+.menu-dropdown-header {
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+/* SUB MENU PORTAL WRAPPER */
+.sidebar-sub-menu {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 4px 0;
+}
+
+/* SUB LINKS SPECIFIC DESIGN */
+.sidebar-sub-menu .sub-nav-link {
+  padding: 10px 16px 10px 38px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.sidebar-sub-menu .sub-nav-link:hover {
+  color: #ff6b00 !important;
+  background-color: #ffffff !important;
+  padding-left: 42px !important;
+}
+
+.sidebar-sub-menu .sub-nav-link.active {
+  background-color: #ffffff !important;
+  color: #ff6b00 !important;
+  font-weight: 800 !important;
+}
+
+/* ================= SIDEBAR FOOTER (LOGOUT) ================= */
+.sidebar-footer {
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: auto; /* Logout button ko hamesha bottom me fix rakhta hai */
+}
+
+.sidebar-logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sidebar-logout-btn:hover {
+  background-color: #b91c1c; /* Danger red on hover */
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
+}
+
+.logout-icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* ================= RESPONSIVENESS OVERLAYS ================= */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 70px;
+    min-width: 70px;
+    padding: 20px 8px;
+  }
+
+  .logo-wrapper {
+    padding: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Mobile screens par text hide hojayega aur logo perfectly scale hoga */
+  .logo-text {
+    display: none !important;
+  }
+  
+  .logo-image {
+    height: 40px;
+    width: 40px;
+  }
+
+  .nav-main-label,
+  .dropdown-arrow,
+  .sidebar-sub-menu,
+  .sidebar-notification-badge {
+    display: none !important;
+  }
+
+  .admin-menu a, 
+  .menu-dropdown-header,
+  .sidebar-logout-btn {
+    justify-content: center;
+    padding: 12px;
+  }
+  
+  .menu-icon, .logout-icon {
+    margin-right: 0;
+    font-size: 18px;
+  }
+}
+
+
+
+/* Sidebar Footer Layout Configuration */
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Language switcher aur logout ke darmiyan gap */
+}
+
+/* Sidebar Language Switcher Container */
+.sidebar-lang-switcher {
+  display: flex;
+  background-color: #f1f5f9;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Lang Buttons inside Sidebar */
+.sidebar-lang-btn {
+  flex: 1;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.sidebar-lang-btn:hover {
+  color: #1e293b;
+}
+
+/* Active Language State (Orange Gradient matching MzadArabia theme) */
+.sidebar-lang-btn.active {
+  background: linear-gradient(135deg, #ff7a18, #ff9f1c);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(255, 122, 24, 0.15);
+}

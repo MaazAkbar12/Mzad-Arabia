@@ -1,0 +1,246 @@
+.admin-form-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-form-container h1 {
+  font-size: 24px;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.admin-form-container .subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* STEPPER */
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.step.active .step-circle {
+  background: #ff7a18;
+}
+
+.step.done .step-circle {
+  background: #38b000;
+}
+
+.step-label {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* FORM STYLING */
+.form-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 10px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.category-item {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #f8fafc;
+}
+
+.category-item:hover {
+  border-color: #ff9f1c;
+  background: #fff8f0;
+}
+
+.category-item.selected {
+  background: #fff0e5;
+  border-color: #ff7a18;
+  color: #ff7a18;
+}
+
+.category-icon {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+/* FIELDS */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="number"],
+.form-field input[type="tel"],
+.form-field select,
+.form-field textarea {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.form-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-field {
+  flex: 1;
+}
+
+.checkbox-row {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-row input {
+  width: auto;
+  cursor: pointer;
+}
+
+.checkbox-row label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* FILE UPLOAD BOX */
+.file-upload-box {
+  border: 2px dashed #cbd5e1;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.preview-container {
+  margin-top: 15px;
+}
+
+.preview-container img,
+.preview-container video {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+}
+
+/* BUTTONS */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.btn-back {
+  padding: 10px 20px;
+  background: #e2e8f0;
+  color: #475569;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-back:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-next {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #ff7a18, #ff9f1c);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(255, 122, 24, 0.2);
+}
+
+/* ERROR MESSAGE */
+.error-message-box {
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  padding: 12px;
+  border-radius: 8px;
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+/* SUCCESS CARD */
+.success-card {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-seal {
+  font-size: 60px;
+  color: #38b000;
+  margin-bottom: 15px;
+}

@@ -111,36 +111,37 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  white-space: nowrap;
 }
 
 /* Control Dots Structure */
 .dots-navigation {
   display: flex;
-  gap: 10px;        /* Dots ke beech ka gap thoda kam kiya */
+  gap: 8px;        
   margin-top: 25px;
   justify-content: center;
   align-items: center;
 }
 
 .nav-dot-item {
-  width: 10px;       /* Ekdum perfect standard size 10px set kiya */
-  height: 10px;      /* Height bhi 10px */
+  width: 10px;       
+  height: 10px;      
   border-radius: 50%;
   background-color: #d1d5db;
   border: none;
   cursor: pointer;
-  padding: 0 !important;       /* Kisi bhi global padding ko remove kiya */
-  line-height: 0 !important;   /* Extra space ko block kiya */
+  padding: 0 !important;       
+  line-height: 0 !important;   
   outline: none;
   transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease;
 }
 
-/* Active dot ko bohot bada karne ki jagah modern look diya */
+/* Active dot layout */
 .nav-dot-item.active {
   background-color: var(--primary-orange, #ff6b00);
-  width: 24px;       /* Active dot ko thoda lamba (capsule style) kiya jo premium lagta hai */
+  width: 24px;       
   border-radius: 6px;
-  transform: none;   /* Scale delete kar diya taaki blur ya bada na dikhe */
+  transform: none;   
 }
 
 /* Animations */
@@ -153,19 +154,53 @@
   100% { transform: translateY(6px); }
 }
 
-/* High fidelity responsive scale adjustments */
+/* ================= MEDIA QUERIES (BREAKPOINTS) ================= */
+
+/* Laptop / Desktop Line Restrictions */
+@media (max-width: 1200px) {
+  .banner-layout-inner { padding: 0 60px; }
+  .banner-main-text { font-size: 28px; }
+}
+
+/* Tablets (iPad/Medium Screens) */
 @media (max-width: 992px) {
   .viewport-3d-wide { height: 170px; }
   .banner-layout-inner { padding: 0 40px; }
-  .banner-main-text { font-size: 24px; max-width: 70%; }
-  .snowflake-graphic { font-size: 45px; }
-  .ice-cube { display: none; }
+  .banner-main-text { font-size: 22px; max-width: 65%; }
+  .snowflake-graphic { font-size: 48px; }
+  .ice-cube { display: none; } /* Drop heavy decoration items */
 }
 
+/* Landscape Phones & Small Tablets */
+@media (max-width: 768px) {
+  .hero-wrapper { padding: 20px 0 35px 0; }
+  .viewport-3d-wide { height: 145px; }
+  .banner-layout-inner { padding: 0 30px; }
+  .banner-main-text { font-size: 18px; max-width: 70%; }
+  .premium-tag { font-size: 14px; padding: 8px 18px; }
+  .snowflake-graphic { font-size: 38px; }
+}
+
+/* Mobile Portrait (Standard Smart Phones) */
 @media (max-width: 600px) {
   .viewport-3d-wide { height: 130px; }
   .banner-layout-inner { padding: 0 20px; }
-  .banner-main-text { font-size: 16px; }
-  .premium-tag { font-size: 13px; padding: 6px 14px; }
-  .snowflake-graphic { font-size: 30px; }
+  .banner-main-text { font-size: 15px; max-width: 75%; line-height: 1.2; }
+  .premium-tag { font-size: 12px; padding: 6px 12px; }
+  .snowflake-graphic { font-size: 28px; }
+  
+  /* Soften 3D translation angles on tiny viewports to avoid container spill */
+  .wide-ad-card.prev-slide { transform: translateX(100%) rotateY(15deg) scale(0.95); }
+  .wide-ad-card.next-slide { transform: translateX(-100%) rotateY(-15deg) scale(0.95); }
+}
+
+/* Extra Small Devices (Older or mini phones) */
+@media (max-width: 400px) {
+  .viewport-3d-wide { height: 115px; }
+  .banner-layout-inner { padding: 0 15px; }
+  .banner-main-text { font-size: 13px; max-width: 70%; }
+  .premium-tag { font-size: 11px; padding: 4px 10px; }
+  .decorations-3d { gap: 10px; }
+  .snowflake-graphic { font-size: 22px; }
+  .dots-navigation { margin-top: 15px; }
 }

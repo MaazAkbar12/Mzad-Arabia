@@ -3,6 +3,21 @@ import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import './PostAd.css';
 
+// Only these categories represent physical products where condition and warranty make sense
+const PRODUCT_CATEGORIES = [
+  'Car Showrooms',
+  'Car Sell',
+  'Motorcycle',
+  'Air Conditioner',
+  'Spare Parts',
+  'Electronics',
+  'Mobile',
+  'Home Appliance',
+  'Cameras',
+  'Electronic Game',
+  'Furnitures'
+];
+
 const PostAd = () => {
   const { t } = useTranslation();
   const currentLang = i18n.language || 'en';
@@ -12,6 +27,7 @@ const PostAd = () => {
   const [selectedPlan, setSelectedPlan] = useState('free');
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('mada');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [validationError, setValidationError] = useState(''); // Localized inline error state
 
   const [formData, setFormData] = useState({
     title: '',
@@ -65,6 +81,11 @@ const PostAd = () => {
     { id: '32', label: 'Others / Miscellaneous', icon: '➕', subCats: ['General Items', 'Scrap Materials', 'Lost & Found'] }
   ];
 
+  // Check if selected category is an actual product type
+  const isProductCategory = () => {
+    return PRODUCT_CATEGORIES.includes(selectedCategory);
+  };
+
   const handleMediaChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -80,21 +101,24 @@ const PostAd = () => {
   };
 
   const handleNext = () => {
+    // Clear any previous error before validation running
+    setValidationError('');
+
     if (currentStep === 1) {
       if (!selectedCategory || !formData.subCategory) {
-        alert(t('alertStep1', '⚠️ Please choose both a Category and its Sub-category before continuing.'));
+        setValidationError(t('alertStep1', '⚠️ Please choose both a Category and its Sub-category before continuing.'));
         return;
       }
     }
     if (currentStep === 2) {
       if (!formData.title || !formData.price || !formData.description) {
-        alert(t('alertStep2', '⚠️ Please fill out the Title, Price, and Description fields.'));
+        setValidationError(t('alertStep2', '⚠️ Please fill out the Title, Price, and Description fields.'));
         return;
       }
     }
     if (currentStep === 3) {
       if (!formData.phone) {
-        alert(t('alertStep3', '⚠️ Contact Phone Number is mandatory to post an ad.'));
+        setValidationError(t('alertStep3', '⚠️ Contact Phone Number is mandatory to post an ad.'));
         return;
       }
       if (selectedPlan === 'free') {
@@ -111,13 +135,8 @@ const PostAd = () => {
   };
 
   const handleBack = () => {
+    setValidationError(''); // clear error screen trace
     if (currentStep > 1) setCurrentStep(currentStep - 1);
-  };
-
-  // Quick Inline Language Switcher Hook
-  const toggleLanguage = () => {
-    const nextLang = currentLang === 'en' ? 'ar' : 'en';
-    i18n.changeLanguage(nextLang);
   };
 
   const currentCategoryObj = categories.find(c => c.label === selectedCategory);
@@ -125,12 +144,7 @@ const PostAd = () => {
   return (
     <div className={`form-container ${currentLang === 'ar' ? 'rtl-direction' : ''}`} style={{ direction: currentLang === 'ar' ? 'rtl' : 'ltr' }}>
       
-      {/* MANUALLY INCLUDED OPTIONAL CORE LAYOUT TOGGLE */}
-      <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '10px 0' }}>
-        
-      </div>
-
-      
+      <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '10px 0' }}></div>
 
       <h1>{t('mainTitle', 'Post New Listing')}</h1>
       <p className="subtitle">{t('subtitle', 'Publish your asset or item across Saudi Arabia\'s leading classifieds')}</p>
@@ -159,7 +173,7 @@ const PostAd = () => {
               <h2>{t('catHeader', 'Select Category & Niche')}</h2>
               <div className="category-grid" style={{ maxHeight: '350px', overflowY: 'auto', border: '1px solid #e5e7eb', borderRadius: '12px', padding: '12px', marginBottom: '20px' }}>
                 {categories.map((cat) => (
-                  <div key={cat.id} className={`category-item ${selectedCategory === cat.label ? 'selected' : ''}`} onClick={() => { setSelectedCategory(cat.label); setFormData({...formData, subCategory: ''}); }}>
+                  <div key={cat.id} className={`category-item ${selectedCategory === cat.label ? 'selected' : ''}`} onClick={() => { setSelectedCategory(cat.label); setFormData({...formData, subCategory: ''}); setValidationError(''); }}>
                     <span className="category-icon">{cat.icon}</span>
                     <span style={{ fontSize: '12px', fontWeight: '600' }}>{t(`categories.${cat.id}`, cat.label)}</span>
                   </div>
@@ -167,7 +181,7 @@ const PostAd = () => {
               </div>
               <div className="form-field">
                 <label>{t('subCatLabel', 'Sub-category')} <span className="required">*</span></label>
-                <select value={formData.subCategory} onChange={(e) => setFormData({...formData, subCategory: e.target.value})} disabled={!selectedCategory}>
+                <select value={formData.subCategory} onChange={(e) => { setFormData({...formData, subCategory: e.target.value}); setValidationError(''); }} disabled={!selectedCategory}>
                   {!selectedCategory ? <option>{t('subCatDisabled', 'Choose main category first')}</option> : (
                     <>
                       <option value="">{t('subCatDefault', '-- Select Variant Sub-Category --')}</option>
@@ -187,31 +201,34 @@ const PostAd = () => {
               <h2>{t('specsHeader', 'Product Specifications & Details')}</h2>
               <div className="form-field">
                 <label>{t('adTitleLabel', 'Ad Title')} <span className="required">*</span></label>
-                <input type="text" placeholder={t('adTitlePlaceholder', 'e.g. iPhone 15 Pro Max 256GB Titanium')} value={formData.title} onChange={(e) => setFormData({...formData, title: e.target.value})} />
+                <input type="text" placeholder={t('adTitlePlaceholder', 'e.g. iPhone 15 Pro Max 256GB Titanium')} value={formData.title} onChange={(e) => { setFormData({...formData, title: e.target.value}); setValidationError(''); }} />
               </div>
 
-              <div className="form-row">
-                <div className="form-field">
-                  <label>{t('conditionLabel', 'Product Condition')}</label>
-                  <select value={formData.condition} onChange={(e) => setFormData({...formData, condition: e.target.value})}>
-                    <option value="New">{t('condNew', '✨ Brand New')}</option>
-                    <option value="Used - Like New">{t('condLikeNew', '👍 Used - Like New')}</option>
-                    <option value="Used - Fair">{t('condFair', '🚲 Used - Fair Condition')}</option>
-                  </select>
+              {/* DYNAMIC FIELD ROW: Only visible if the selected category is an actual product */}
+              {isProductCategory() && (
+                <div className="form-row">
+                  <div className="form-field">
+                    <label>{t('conditionLabel', 'Product Condition')}</label>
+                    <select value={formData.condition} onChange={(e) => setFormData({...formData, condition: e.target.value})}>
+                      <option value="New">{t('condNew', '✨ Brand New')}</option>
+                      <option value="Used - Like New">{t('condLikeNew', '👍 Used - Like New')}</option>
+                      <option value="Used - Fair">{t('condFair', '🚲 Used - Fair Condition')}</option>
+                    </select>
+                  </div>
+                  <div className="form-field">
+                    <label>{t('warrantyLabel', 'Warranty Available?')}</label>
+                    <select value={formData.warranty} onChange={(e) => setFormData({...formData, warranty: e.target.value})}>
+                      <option value="No">{t('warrantyNo', 'No Warranty')}</option>
+                      <option value="Yes">{t('warrantyYes', 'Yes Available')}</option>
+                    </select>
+                  </div>
                 </div>
-                <div className="form-field">
-                  <label>{t('warrantyLabel', 'Warranty Available?')}</label>
-                  <select value={formData.warranty} onChange={(e) => setFormData({...formData, warranty: e.target.value})}>
-                    <option value="No">{t('warrantyNo', 'No Warranty')}</option>
-                    <option value="Yes">{t('warrantyYes', 'Yes Available')}</option>
-                  </select>
-                </div>
-              </div>
+              )}
 
               <div className="form-row">
                 <div className="form-field">
                   <label>{t('priceLabel', 'Price (SAR)')} <span className="required">*</span></label>
-                  <input type="number" placeholder={t('pricePlaceholder', 'SAR 0.00')} value={formData.price} onChange={(e) => setFormData({...formData, price: e.target.value})} />
+                  <input type="number" placeholder={t('pricePlaceholder', 'SAR 0.00')} value={formData.price} onChange={(e) => { setFormData({...formData, price: e.target.value}); setValidationError(''); }} />
                 </div>
                 <div className="form-field">
                   <label>{t('locationLabel', 'Location (Saudi Arabia)')}</label>
@@ -232,7 +249,7 @@ const PostAd = () => {
 
               <div className="form-field" style={{ marginTop: '15px' }}>
                 <label>{t('descLabel', 'Detailed Description')} <span className="required">*</span></label>
-                <textarea placeholder={t('descPlaceholder', 'Mention specifications...')} value={formData.description} onChange={(e) => setFormData({...formData, description: e.target.value})}></textarea>
+                <textarea placeholder={t('descPlaceholder', 'Mention specifications...')} value={formData.description} onChange={(e) => { setFormData({...formData, description: e.target.value}); setValidationError(''); }}></textarea>
               </div>
             </div>
           )}
@@ -264,7 +281,7 @@ const PostAd = () => {
               <div className="form-row" style={{ marginTop: '15px' }}>
                 <div className="form-field">
                   <label>{t('phoneLabel', 'Contact Phone Number')} <span className="required">*</span></label>
-                  <input type="tel" placeholder="+966 5xxxxxxx" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} />
+                  <input type="tel" placeholder="+966 5xxxxxxx" value={formData.phone} onChange={(e) => { setFormData({...formData, phone: e.target.value}); setValidationError(''); }} />
                 </div>
                 <div className="form-field">
                   <label>{t('whatsappLabel', 'WhatsApp Number')} <span className="optional">{t('optionalHint', '(Optional)')}</span></label>
@@ -336,6 +353,13 @@ const PostAd = () => {
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', borderTop: '1px solid #e2e8f0', paddingTop: '8px', color: '#0f172a', fontSize: '15px' }}><span>{t('totalSummary', 'Grand Total')}</span><span>SAR 50.00</span></div>
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* RED INLINE VALIDATION ERROR MESSAGING VIEW LAYER */}
+          {validationError && (
+            <div className="error-message-box" style={{ background: '#fef2f2', border: '1px solid #fee2e2', padding: '12px 16px', borderRadius: '8px', color: '#dc2626', fontWeight: '600', fontSize: '13px', marginTop: '20px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              {validationError}
             </div>
           )}
 

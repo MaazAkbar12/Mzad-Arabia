@@ -549,7 +549,13 @@
   "electricShowrooms": "EV Showrooms",
   "agencyShowrooms": "Official Agencies"
 
+ 
+},
     
+   "adminPostTitle": "Admin Portal: Management New Ad",
+  "adminSubtitle": "Instantly publish system-approved items on behalf of users or platform inventory." ,
+  "step2AdminLabel": "Ad Specifications & Media",
+
+  "specsHeaderAdmin": "Listing Content Information"
     
-}
 } 

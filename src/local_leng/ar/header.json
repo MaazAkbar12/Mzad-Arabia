@@ -8,6 +8,7 @@
   "searchPlaceholder": "فئات البحث", 
    "trending_now": "الرائج الآن",
    "createAccount": "إنشاء حساب",
+   "appName": "مزاد عربية",
  
 
   "header": {
@@ -16,5 +17,43 @@
     "categoriesOverview": "نظرة عامة على الفئات",
     "seeAll": "عرض جميع الفئات"
 
+  },
+
+
+  
+  "sidebar": {
+
+    "dashboard": "لوحة التحكم",
+    "notifications": "الإشعارات",
+    "newAdsPost": "إضافة إعلان جديد",
+    "sellers": "البائعين",
+    "buyers": "المشترين",
+    "advertisements": "الإعلانات",
+    "allAds": "جميع الإعلانات",
+    "activeAds": "الإعلانات النشطة",
+    "expiredAds": "الإعلانات المنتهية",
+    "deletedAds": "الإعلانات المحذوفة",
+    "settings": "الإعدادات",
+    "logout": "تسجيل الخروج"
+  },
+
+
+  "dashboard": {
+    "mainTitle": "نظرة عامة على لوحة التحكم",
+    "subTitle": "مرحباً بك مجدداً! إليك آخر مستجدات مزاد عربية اليوم.",
+    "totalSellers": "إجمالي البائعين",
+    "totalBuyers": "إجمالي المشترين",
+    "activeAds": "الإعلانات النشطة",
+    "premiumAds": "الإعلانات المميزة",
+    "analyticsTitle": "تحليلات الأداء والإعلانات",
+    "chartPlaceholder": "يتم عرض المخططات البيانية الديناميكية هنا",
+    "recentAds": "الإعلانات الحديثة",
+    "moderateAds": "إدارة الإعلانات",
+    "currency": "ريال سعودي",
+    "locations": {
+      "riyadh": "الرياض",
+      "jeddah": "جدة",
+      "alMalqa": "الملقا"
+    }
   }
 }

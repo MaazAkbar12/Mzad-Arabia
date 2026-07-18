@@ -7,11 +7,47 @@
   "searchPlaceholder": "Search categories...",
   "trending_now": "Trending Now",
   "createAccount": "Create Account",
+  "appName": "MzadArabia",
 
   "header": {
     "adsCategories": "Ads Categories",
     "categories": "Categories",
     "categoriesOverview": "Categories Overview",
     "seeAll": "See all categories"
+  },
+
+
+   "sidebar": {
+    "dashboard": "Dashboard",
+    "notifications": "Notifications",
+    "newAdsPost": "New Ads Post",
+    "sellers": "Sellers",
+    "buyers": "Buyers",
+    "advertisements": "Advertisements",
+    "allAds": "All Ads",
+    "activeAds": "Active Ads",
+    "expiredAds": "Expired Ads",
+    "deletedAds": "Deleted Ads",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+
+  "dashboard": {
+    "mainTitle": "Dashboard Overview",
+    "subTitle": "Welcome back! Here's what's happening with Mzad Arabia today.",
+    "totalSellers": "Total Sellers",
+    "totalBuyers": "Total Buyers",
+    "activeAds": "Active Ads",
+    "premiumAds": "Premium Ads",
+    "analyticsTitle": "Performance & Ads Analytics",
+    "chartPlaceholder": "Render charts interface dynamic logic here",
+    "recentAds": "Recent Ads",
+    "moderateAds": "Moderate Ads",
+    "currency": "SAR",
+    "locations": {
+      "riyadh": "Riyadh",
+      "jeddah": "Jeddah",
+      "alMalqa": "Al-Malqa"
+    }
   }
 }

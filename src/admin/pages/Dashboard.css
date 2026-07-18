@@ -1,0 +1,315 @@
+/* ================= MAIN CONTAINER LAYER ================= */
+.dashboard-content {
+  padding: 30px;
+  /* थिनू कलर्स का एकदम लाइट और सॉफ्ट लीनियर ग्रेडिएंट वर्जन */
+  background: linear-gradient(
+        135deg,
+        rgba(255, 122, 24, 0.06) 0%,
+        rgba(255, 159, 28, 0.06) 50%,
+        rgba(56, 176, 0, 0.06) 100%
+  );
+  flex: 1;
+  min-height: calc(100vh - 70px);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* ================= TOP HEADER BAR ================= */
+.dashboard-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 16px;
+}
+
+.dashboard-main-title {
+  margin: 0;
+  font-size: 24px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.dashboard-sub-title {
+  margin: 5px 0 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.header-action-btns {
+  display: flex;
+  gap: 10px;
+}
+
+/* BUTTONS COMMON */
+.header-action-btns button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary {
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f5f9;
+}
+
+.btn-primary {
+  border: none;
+  background-color: #ff6b00;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #e05e00;
+}
+
+/* ================= GRID COUNTER STAT CARDS ================= */
+.counter-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  /* कार्ड्स को बैकग्राउंड से अलग उभारने के लिए थोड़ा स्मूथ शैडो */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-icon {
+  font-size: 24px;
+}
+
+.stat-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.trend-up {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.trend-info {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 15px 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 26px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* ================= SPLIT GRID (CHARTS & LIST) ================= */
+.analytics-split-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.analytics-card, .recent-ads-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.section-card-title {
+  margin: 0;
+  font-size: 16px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* LEFT SIDE PLATFORM PLACEHOLDER */
+.chart-placeholder {
+  height: 230px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #e2e8f0;
+  color: #94a3b8;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE RECENT ADS LAYOUT */
+.recent-ads-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.moderate-link {
+  font-size: 12px;
+  color: #ff6b00;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.moderate-link:hover {
+  opacity: 0.8;
+}
+
+.ads-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-item-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #f8fafc;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+}
+
+.ad-item-row.no-border {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.ad-item-thumb {
+  width: 45px;
+  height: 45px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ad-item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.ad-item-details h4 {
+  margin: 0;
+  font-size: 13px;
+  color: #1e293b;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ad-item-details p {
+  margin: 3px 0 0 0;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.approve-action-btn {
+  color: #22c55e;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  background-color: #f0fdf4;
+}
+
+.approve-action-btn:hover {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+
+/* ================= GLOBAL MEDIA BREAKPOINTS ================= */
+
+@media (max-width: 1024px) {
+  .analytics-split-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 20px 15px;
+  }
+  
+  .dashboard-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .header-action-btns {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-main-title {
+    font-size: 20px;
+  }
+
+  .stat-value {
+    font-size: 22px;
+  }
+
+  .header-action-btns button {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .counter-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,43 @@
+/* ================= MAIN ROOT LAYOUT ================= */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    /* आपका पसंदीदा 3-कलर लीनियर ग्रेडिएंट पूरे लेआउट के बैकग्राउंड पर */
+    background: linear-gradient(
+        135deg,
+        #ff7a18 0%,
+        #ff9f1c 50%,
+        #38b000 100%
+    );
+    background-attachment: fixed; /* स्क्रॉल करने पर भी ग्रेडिएंट स्मूथ रहेगा */
+    width: 100%;
+}
+
+/* ================= RIGHT MAIN SECTION ================= */
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* कंटेनर को ओवरफ्लो होने से रोकता है */
+    
+    /* साइडबार की विड्थ 260px है, इसलिए उतना ही स्पेस लेफ्ट से छोड़ेंगे */
+    margin-left: 260px; 
+    transition: margin-left 0.25s ease;
+    background: transparent; /* ताकि रूट लेआउट का ग्रेडिएंट दिखे */
+}
+
+/* ================= CONTENT BODY CONTAINER ================= */
+.admin-content {
+    /* Dashboard.jsx के अंदर की पैडिंग (30px) को बरकरार रखने के लिए इसे 0 रखा गया है */
+    padding: 0; 
+    flex: 1;
+    background: transparent;
+}
+
+/* ================= RESPONSIVENESS OVERLAYS ================= */
+@media (max-width: 768px) {
+    .admin-main {
+        /* मोबाइल पर साइडबार छोटा होकर 70px हो जाता है, तो मार्जिन भी कम कर देंगे */
+        margin-left: 70px;
+    }
+}
