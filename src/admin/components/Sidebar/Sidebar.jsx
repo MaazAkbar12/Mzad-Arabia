@@ -25,14 +25,14 @@ const Sidebar = () => {
     return (
         <aside className="admin-sidebar">
             {/* Logo aur Text Wrapper */}
-            <div className="logo-wrapper">
+            <div className="logo-wrappers">
                 <Link to="/" className="logo-link-group">
                     <img 
                         src={logo} 
                         alt="Aura Market Logo" 
-                        className="logo-image" 
+                        className="logoo-image" 
                     />
-                    <span className="logo-text">{t('appName')}</span>
+                    <span className="logoo-text">{t('appName')}</span>
                 </Link>
             </div>
 

@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom"; // BrowserRouter ko HashRouter se badla
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/header/header";
 import Footer from "./components/Footer/Footer";
@@ -12,12 +12,17 @@ import AdminRoutes from "./admin/routes/AdminRoutes";
 
 function App() {
   return (
-    // HashRouter ke saath basename ki zaroorat nahi hoti, yeh automatic handle ho jata hai
     <Router>
       <Routes>
-        {/* Website Routes */}
+        {/* Admin Routes (Isko hamesha TOP par rakhein taake pehle yeh check ho) */}
         <Route
-          path="/*"
+          path="/admin/*"
+          element={<AdminRoutes />}
+        />
+
+        {/* Public Website Routes (Bina header/footer ke conflict ke) */}
+        <Route
+          path="*"
           element={
             <>
               <Header />
@@ -26,16 +31,11 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/post-ad" element={<PostAd />} />
+                {/* Aap chahein to yahan ek 404 page bhi daal sakte hain */}
               </Routes>
               <Footer />
             </>
           }
-        />
-
-        {/* Admin Routes */}
-        <Route
-          path="/admin/*"
-          element={<AdminRoutes />}
         />
       </Routes>
     </Router>

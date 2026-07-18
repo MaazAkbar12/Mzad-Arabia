@@ -24,7 +24,7 @@
 
 /* ================= LOGO & TEXT SAME LINE LAYOUT (BADA & CLEAR SIZE) ================= */
 /* ================= LOGO & TEXT SAME LINE LAYOUT (MAZEED BADA SIZE) ================= */
-.logo-wrapper {
+.logo-wrappers {
   margin-bottom: 35px;
   padding: 0 2px;     /* Padding mazeed kam ki taake bade logo ko full space mile */
   display: flex;
@@ -39,7 +39,7 @@
   width: 100%;
 }
 
-.logo-image {
+.logoo-image {
   height: 70px;        /* Height ab 50px se barha kar 70px kar di hai */
   width: 70px;         /* Width bhi 70px kar di taake logo khul kar bada dikhe */
   object-fit: contain; /* Logo stretch ya distort nahi hoga, clean dikhega */
@@ -47,7 +47,7 @@
   flex-shrink: 0;      
 }
 
-.logo-text {
+.logoo-text {
   font-size: 22px;     /* Text ka size bhi 22px kiya taake bade logo ke sath match kare */
   font-weight: 900;
   color: #ffffff;
